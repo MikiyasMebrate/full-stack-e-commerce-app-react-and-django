@@ -45,8 +45,6 @@ class ProductImage(models.Model):
     image = models.ImageField(upload_to='product_images')
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self) -> str:
-        return self.product
     
 
 
