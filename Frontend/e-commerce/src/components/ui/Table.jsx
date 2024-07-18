@@ -1,10 +1,13 @@
 import dateFormatter from  '../../utility/dateFormatter.js'
 import ModelDelete from './ModelDelete.jsx';
 import { useState } from 'react';
+import ToastMessage from './ToastMessage.jsx';
+import AlertMessage from './Alert.jsx';
 
 const Table = ({data,handleOnChangeUrl}) => {
     const [selectedItem, setSelectedItem] = useState(null)
     const [show, setShow] = useState(false);
+    const [showAlert, setShowAlert] = useState(false)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -13,6 +16,12 @@ const Table = ({data,handleOnChangeUrl}) => {
         setSelectedItem(data)
         handleShow()
     }
+
+    const handleAlert = ()=>{
+      setShowAlert(true)
+    }
+
+
 
     let table = data.categories.map((list, index) => (
         <tr key={list.id}>
@@ -31,6 +40,7 @@ const Table = ({data,handleOnChangeUrl}) => {
     ))
   return (
     <>
+   {showAlert && <AlertMessage message="Hello User 😀, Successfully Delete!" />}
     <div className="table-responsive">
       <table className="table table-hover ">
         <thead>
@@ -48,7 +58,7 @@ const Table = ({data,handleOnChangeUrl}) => {
       </table>
       </div>
 
-      <ModelDelete handleOnChangeUrl={handleOnChangeUrl} data={selectedItem} handleClose={handleClose} handleShow={handleShow} show={show} />
+      <ModelDelete handleOnChangeUrl={handleOnChangeUrl} data={selectedItem} handleClose={handleClose} handleAlert={handleAlert}  show={show} />
     </>
   );
 };

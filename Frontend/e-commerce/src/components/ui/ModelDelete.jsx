@@ -1,16 +1,9 @@
-import { useState, useEffect, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import useDelete from "../../hook/useDelete";
-
 import { useForm } from "react-hook-form";
-
-
 import axios from "axios";
 
-
-
-function ModelDelete({ handleOnChangeUrl, handleClose, show, data }) {
+function ModelDelete({ handleOnChangeUrl, handleClose, show, data, handleAlert }) {
 
 
   const {handleSubmit, formState: { isSubmitting },} = useForm();
@@ -19,19 +12,24 @@ function ModelDelete({ handleOnChangeUrl, handleClose, show, data }) {
   const onSubmit = async ()=>{
     try{
       const response = await axios.delete(`http://127.0.0.1:8000/category-filter/${data?.id}/`)
-      console.log("success")
+      .then(response =>{
+        null
+      })
+      .then(err=>{
+        console.log(err)
+      })
       handleClose()
       handleOnChangeUrl()
+      handleAlert()
     }catch(error){
       console.error('Error deleting category filter:', error);
     }
 }
 
 
-
   return (
     <>
-
+    
       <Modal size="lg" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Delete Category</Modal.Title>
@@ -59,6 +57,7 @@ function ModelDelete({ handleOnChangeUrl, handleClose, show, data }) {
           
         </Modal.Footer>
       </Modal>
+      
     </>
   );
 }
