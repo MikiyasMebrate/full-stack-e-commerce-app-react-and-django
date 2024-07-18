@@ -6,14 +6,20 @@ from rest_framework import status
 
 
 # Create your views here.
-@api_view(['GET'])
-def category_list(request):
+@api_view(['GET', 'DELETE'])
+def category_list(request,id=None):
     if request.method == "GET":
         categories = list(Category.objects.all().values())
         context = {
             'categories': categories
         }
-        return JsonResponse(context)
-    else:
-        return JsonResponse({'message': 'Method not allowed'}, status=405)
+        import time
+        time.sleep(2)
+        return JsonResponse(context, status=status.HTTP_200_OK)
+    elif request.method == "DELETE":
+        category = Category.objects.get(id=id)
+        category.delete()
+        return JsonResponse({'message' : "Successfully Delete"})
+    
+    return JsonResponse({'message': 'Method not allowed'}, status=status.HTTP_401_UNAUTHORIZED)
 
