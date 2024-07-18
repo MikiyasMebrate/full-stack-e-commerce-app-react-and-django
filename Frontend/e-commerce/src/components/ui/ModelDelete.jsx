@@ -1,32 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import axios from "axios";
 import useDelete from "../../hook/useDelete";
-import useFetch from "../../hook/useFetch";
-import {useNavigate } from "react-router-dom"
+
+import { useForm } from "react-hook-form";
 
 
-function ModelDelete({ handleClose, handleShow, show, data }) {
-   const [url, setUrl] = useState(null)
-   const [response, loading, error] = useDelete(url);
-   console.log(loading)
+import axios from "axios";
 
 
 
+function ModelDelete({ handleOnChangeUrl, handleClose, show, data }) {
 
 
+  const {handleSubmit, formState: { isSubmitting },} = useForm();
 
-  const handleOnDelete = () => {
-    // Made handleOnDelete async
-    setUrl(`http://127.0.0.1:8000/category-filter/${data?.id}/`)
-    
 
-    
-  };
+  const onSubmit = async ()=>{
+    try{
+      const response = await axios.delete(`http://127.0.0.1:8000/category-filter/${data?.id}/`)
+      console.log("success")
+      handleClose()
+      handleOnChangeUrl()
+    }catch(error){
+      console.error('Error deleting category filter:', error);
+    }
+}
+
+
 
   return (
     <>
+
       <Modal size="lg" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Delete Category</Modal.Title>
@@ -36,12 +41,22 @@ function ModelDelete({ handleClose, handleShow, show, data }) {
           <span className="text-danger fw-bold">{data?.name}</span>?
         </Modal.Body>
         <Modal.Footer>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="btn-group gap-2">
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <button disabled={loading} onClick={handleOnDelete} className="btn btn-danger" >{loading ? '---------' : 'mm'}</button>
-          </div>
+            
+           
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+
+            
+              <button type="submit" disabled={isSubmitting} className="btn btn-danger">
+              {isSubmitting ? 'Loading' : 'Delete'}
+              </button>
+
+              </div>
+            </form>
+          
         </Modal.Footer>
       </Modal>
     </>

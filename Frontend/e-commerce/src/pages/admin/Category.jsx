@@ -3,10 +3,13 @@ import Spinner from "../../components/Spinner";
 import Table from "../../components/ui/Table";
 import useFetch from "../../hook/useFetch";
 
-
 const Category = () => {
-  const [data, pending, error] = useFetch("http://127.0.0.1:8000/category-list/");
+  const [refresh, setRefresh] = useState(0)
+  const [data, pending, error] = useFetch("http://127.0.0.1:8000/category-list/", refresh);
 
+  const handleOnChangeUrl = () =>{
+    setRefresh(refresh+1)
+  }
   return (
     <>
       <h1>Category</h1>
@@ -18,7 +21,7 @@ const Category = () => {
         </>
       )}
       {pending && <Spinner />}
-      {data && <Table  data={data} />}
+      {data && <Table handleOnChangeUrl={handleOnChangeUrl}  data={data} />}
     </>
   );
 };

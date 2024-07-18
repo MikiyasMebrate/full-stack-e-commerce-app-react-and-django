@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 
 const useDelete = (url) => {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
 
+  
+
   useEffect(() => {
-    console.log("called")
+    setLoading(true)
     const fetchData =  () => {
         axios.delete(url)
         .then(response => {

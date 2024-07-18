@@ -2,7 +2,7 @@ import dateFormatter from  '../../utility/dateFormatter.js'
 import ModelDelete from './ModelDelete.jsx';
 import { useState } from 'react';
 
-const Table = ({data}) => {
+const Table = ({data,handleOnChangeUrl}) => {
     const [selectedItem, setSelectedItem] = useState(null)
     const [show, setShow] = useState(false);
 
@@ -48,7 +48,7 @@ const Table = ({data}) => {
       </table>
       </div>
 
-      <ModelDelete data={selectedItem} handleClose={handleClose} handleShow={handleShow} show={show} />
+      <ModelDelete handleOnChangeUrl={handleOnChangeUrl} data={selectedItem} handleClose={handleClose} handleShow={handleShow} show={show} />
     </>
   );
 };

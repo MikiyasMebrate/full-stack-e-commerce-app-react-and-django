@@ -14,12 +14,14 @@ def category_list(request,id=None):
             'categories': categories
         }
         import time
-        time.sleep(2)
+        time.sleep(1)
         return JsonResponse(context, status=status.HTTP_200_OK)
     elif request.method == "DELETE":
         category = Category.objects.get(id=id)
+        import time
+        time.sleep(1)
         category.delete()
-        return JsonResponse({'message' : "Successfully Delete"})
+        return JsonResponse({'message' : "Successfully sfsfsfs"})
     
     return JsonResponse({'message': 'Method not allowed'}, status=status.HTTP_401_UNAUTHORIZED)
 
