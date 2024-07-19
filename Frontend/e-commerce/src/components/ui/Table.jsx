@@ -1,7 +1,6 @@
 import dateFormatter from  '../../utility/dateFormatter.js'
 import ModelDelete from './ModelDelete.jsx';
 import { useState } from 'react';
-import ToastMessage from './ToastMessage.jsx';
 import AlertMessage from './Alert.jsx';
 
 const Table = ({data,handleOnChangeUrl}) => {
