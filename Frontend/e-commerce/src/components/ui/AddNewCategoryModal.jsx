@@ -19,6 +19,7 @@ const AddNewCategoryModal = ({ show, handleCloseAdd , handleOnChangeUrl , showAl
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm({
     resolver: yupResolver(scheme),
   });
@@ -28,7 +29,7 @@ const AddNewCategoryModal = ({ show, handleCloseAdd , handleOnChangeUrl , showAl
     try{
         const response = await axios.post(`http://127.0.0.1:8000/category-list/`, data)
         .then(response =>{
-          console.log(response)
+          reset()
         })
         .then(err=>{
           console.log(err)

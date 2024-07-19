@@ -1,34 +1,34 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import "../assets/admin/css/app.min.css";
-import Index from "../pages/admin/index.jsx";
+import Category from "../Pages/Admin/Categories.jsx";
+import Index from "../Pages/Admin/Index.jsx";
+import "../assets/Admin/vendor/fontawesome-free/css/all.min.css"
+import "../assets/Admin/css/sb-admin-2.min.css";
 
 
-import "../assets/admin/fonts/anticon.ttf";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HeadNav from "../components/ui/Admin/HeadNav.jsx";
-import Category from "../pages/admin/Category.jsx";
+import HeadNav from "../components/ui/HeadNav.jsx";
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HeadNav />,
-    children: [
-      {
-        path: "/",
-        element: <Index />,
-      },
-      {
-        path : "category/",
-        element : <Category />
-      }
-    ],
-  },
-]);
+    {
+        path: '/',
+        element: <HeadNav />,
+        children : [
+            {
+                path: '/',
+                element: <Index />
+            },
+            {
+                path : 'category/',
+                element : <Category />
+            },
+        ]
+    }
+])
 
 const AdminLayout = () => {
   return (
     <>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
     </>
   );
 };

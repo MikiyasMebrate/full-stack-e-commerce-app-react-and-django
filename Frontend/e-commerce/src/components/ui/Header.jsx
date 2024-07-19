@@ -1,238 +1,273 @@
 const Header = () => {
-    return ( 
-        <>
-         <div className="search-header-area-main">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-12">
-                    <div className="logo-search-category-wrapper">
-                        <a href="index.html" className="logo-area">
-                            <img src="assets/images/logo/logo-01.svg" alt="logo-main" className="logo" />
-                        </a>
-                        <div className="category-search-wrapper">
-                            <div className="category-btn category-hover-header">
-                                <img className="parent" src="assets/images/icons/bar-1.svg" alt="icons" />
-                                <span>Categories</span>
-                                <ul className="category-sub-menu" id="category-active-four">
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/01.svg" alt="icons" />
-                                            <span>Breakfast &amp; Dairy</span>
-                                            <i className="fa-regular fa-plus"></i>
-                                        </a>
-                                        <ul className="submenu mm-collapse">
-                                            <li><a className="mobile-menu-link" href="#">Breakfast</a></li>
-                                            <li><a className="mobile-menu-link" href="#">Dinner</a></li>
-                                            <li><a className="mobile-menu-link" href="#"> Pumking</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/02.svg" alt="icons" />
-                                            <span>Meats &amp; Seafood</span>
-                                            <i className="fa-regular fa-plus"></i>
-                                        </a>
-                                        <ul className="submenu mm-collapse">
-                                            <li><a className="mobile-menu-link" href="#">Breakfast</a></li>
-                                            <li><a className="mobile-menu-link" href="#">Dinner</a></li>
-                                            <li><a className="mobile-menu-link" href="#"> Pumking</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/03.svg" alt="icons" />
-                                            <span>Breads &amp; Bakery</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/04.svg" alt="icons" />
-                                            <span>Chips &amp; Snacks</span>
-                                            <i className="fa-regular fa-plus"></i>
-                                        </a>
-                                        <ul className="submenu mm-collapse">
-                                            <li><a className="mobile-menu-link" href="#">Breakfast</a></li>
-                                            <li><a className="mobile-menu-link" href="#">Dinner</a></li>
-                                            <li><a className="mobile-menu-link" href="#"> Pumking</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/05.svg" alt="icons" />
-                                            <span>Medical Healthcare</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/06.svg" alt="icons" />
-                                            <span>Breads &amp; Bakery</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/07.svg" alt="icons" />
-                                            <span>Biscuits &amp; Snacks</span>
-                                            <i className="fa-regular fa-plus"></i>
-                                        </a>
-                                        <ul className="submenu mm-collapse">
-                                            <li><a className="mobile-menu-link" href="#">Breakfast</a></li>
-                                            <li><a className="mobile-menu-link" href="#">Dinner</a></li>
-                                            <li><a className="mobile-menu-link" href="#"> Pumking</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/08.svg" alt="icons" />
-                                            <span>Frozen Foods</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/09.svg" alt="icons" />
-                                            <span>Grocery &amp; Staples</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="menu-item">
-                                            <img src="assets/images/icons/10.svg" alt="icons" />
-                                            <span>Other Items</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <form action="#" className="search-header">
-                                <input type="text" placeholder="Search for products, categories or brands" required />
-                                <a href="#" className="rts-btn btn-primary radious-sm with-icon">
-                                    <div className="btn-text">
-                                        Search
-                                    </div>
-                                    <div className="arrow-icon">
-                                        <i className="fa-light fa-magnifying-glass"></i>
-                                    </div>
-                                    <div className="arrow-icon">
-                                        <i className="fa-light fa-magnifying-glass"></i>
-                                    </div>
-                                </a>
-                            </form>
-                        </div>
-                        <div className="actions-area">
-                            <div className="search-btn" id="searchs">
-    
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.75 14.7188L11.5625 10.5312C12.4688 9.4375 12.9688 8.03125 12.9688 6.5C12.9688 2.9375 10.0312 0 6.46875 0C2.875 0 0 2.9375 0 6.5C0 10.0938 2.90625 13 6.46875 13C7.96875 13 9.375 12.5 10.5 11.5938L14.6875 15.7812C14.8438 15.9375 15.0312 16 15.25 16C15.4375 16 15.625 15.9375 15.75 15.7812C16.0625 15.5 16.0625 15.0312 15.75 14.7188ZM1.5 6.5C1.5 3.75 3.71875 1.5 6.5 1.5C9.25 1.5 11.5 3.75 11.5 6.5C11.5 9.28125 9.25 11.5 6.5 11.5C3.71875 11.5 1.5 9.28125 1.5 6.5Z" fill="#1F1F25"></path>
-                                </svg>
-    
-                            </div>
-                            <div className="menu-btn" id="menu-btn">
-    
-                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
-                                    <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
-                                    <rect width="20" height="2" fill="#1F1F25"></rect>
-                                </svg>
-    
-                            </div>
-                        </div>
-                        <div className="accont-wishlist-cart-area-header">
-                            <a href="account.html" className="btn-border-only account">
-                                <i className="fa-light fa-user"></i>
-                                <span>Account</span>
-                            </a>
-                            <a href="wishlist.html" className="btn-border-only wishlist">
-                                <i className="fa-regular fa-heart"></i>
-                                <span>Wishlist</span>
-                            </a>
-                            <div className="btn-border-only cart category-hover-header">
-                                <i className="fa-sharp fa-regular fa-cart-shopping"></i>
-                                <span  className="text">My Cart</span>
-                                <div className="category-sub-menu card-number-show">
-                                    <h5 className="shopping-cart-number">Shopping Cart (03)</h5>
-                                    <div className="cart-item-1 border-top">
-                                        <div className="img-name">
-                                            <div className="thumbanil">
-                                                <img src="assets/images/shop/cart-1.png" alt="" />
-                                            </div>
-                                            <div className="details">
-                                                <a href="shop-details.html">
-                                                    <h5 className="title">Foster Farms Breast Nuggets Shaped Chicken</h5>
-                                                </a>
-                                                <div className="number">
-                                                    1 <i className="fa-regular fa-x"></i>
-                                                    <span>$36.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="close-c1">
-                                            <i className="fa-regular fa-x"></i>
-                                        </div>
-                                    </div>
-                                    <div className="cart-item-1">
-                                        <div className="img-name">
-                                            <div className="thumbanil">
-                                                <img src="assets/images/shop/05.png" alt="" />
-                                            </div>
-                                            <div className="details">
-                                                <a href="shop-details.html">
-                                                    <h5 className="title">Foster Farms Breast Nuggets Shaped Chicken</h5>
-                                                </a>
-                                                <div className="number">
-                                                    1 <i className="fa-regular fa-x"></i>
-                                                    <span>$36.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="close-c1">
-                                            <i className="fa-regular fa-x"></i>
-                                        </div>
-                                    </div>
-                                    <div className="cart-item-1">
-                                        <div className="img-name">
-                                            <div className="thumbanil">
-                                                <img src="assets/images/shop/04.png" alt="" />
-                                            </div>
-                                            <div className="details">
-                                                <a href="shop-details.html">
-                                                    <h5 className="title">Foster Farms Breast Nuggets Shaped Chicken</h5>
-                                                </a>
-                                                <div className="number">
-                                                    1 <i className="fa-regular fa-x"></i>
-                                                    <span>$36.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="close-c1">
-                                            <i className="fa-regular fa-x"></i>
-                                        </div>
-                                    </div>
-                                    <div className="sub-total-cart-balance">
-                                        <div className="bottom-content-deals mt--10">
-                                            <div className="top">
-                                                <span>Sub Total:</span>
-                                                <span className="number-c">$108.00</span>
-                                            </div>
-                                            <div className="single-progress-area-incard">
-                                                <div className="progress">
-                                                    <div className="progress-bar wow fadeInLeft" role="progressbar" style={{width : "80%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                            <p>Spend More <span>$125.00</span> to reach <span>Free Shipping</span></p>
-                                        </div>
-                                        <div className="button-wrapper d-flex align-items-center justify-content-between">
-                                            <a href="cart.html" className="rts-btn btn-primary ">View Cart</a>
-                                            <a href="checkout.html" className="rts-btn btn-primary border-only">CheckOut</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="cart.html" className="over_link"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <>
+      <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <button
+          id="sidebarToggleTop"
+          className="btn btn-link d-md-none rounded-circle mr-3"
+        >
+          <i className="fa fa-bars"></i>
+        </button>
+
+        <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control bg-light border-0 small"
+              placeholder="Search for..."
+              aria-label="Search"
+              aria-describedby="basic-addon2"
+            />
+            <div className="input-group-append">
+              <button className="btn btn-primary" type="button">
+                <i className="fas fa-search fa-sm"></i>
+              </button>
             </div>
-        </div>
-    </div>
-        </>
-    );
-}
- 
+          </div>
+        </form>
+
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item dropdown no-arrow d-sm-none">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="searchDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i className="fas fa-search fa-fw"></i>
+            </a>
+            <div
+              className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+              aria-labelledby="searchDropdown"
+            >
+              <form className="form-inline mr-auto w-100 navbar-search">
+                <div className="input-group">
+                  <input
+                    type="text"
+                    className="form-control bg-light border-0 small"
+                    placeholder="Search for..."
+                    aria-label="Search"
+                    aria-describedby="basic-addon2"
+                  />
+                  <div className="input-group-append">
+                    <button className="btn btn-primary" type="button">
+                      <i className="fas fa-search fa-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+
+          <li className="nav-item dropdown no-arrow mx-1">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="alertsDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i className="fas fa-bell fa-fw"></i>
+              <span className="badge badge-danger badge-counter">3+</span>
+            </a>
+            <div
+              className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+              aria-labelledby="alertsDropdown"
+            >
+              <h6 className="dropdown-header">Alerts Center</h6>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="mr-3">
+                  <div className="icon-circle bg-primary">
+                    <i className="fas fa-file-alt text-white"></i>
+                  </div>
+                </div>
+                <div>
+                  <div className="small text-gray-500">December 12, 2019</div>
+                  <span className="font-weight-bold">
+                    A new monthly report is ready to download!
+                  </span>
+                </div>
+              </a>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="mr-3">
+                  <div className="icon-circle bg-success">
+                    <i className="fas fa-donate text-white"></i>
+                  </div>
+                </div>
+                <div>
+                  <div className="small text-gray-500">December 7, 2019</div>
+                  $290.29 has been deposited into your account!
+                </div>
+              </a>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="mr-3">
+                  <div className="icon-circle bg-warning">
+                    <i className="fas fa-exclamation-triangle text-white"></i>
+                  </div>
+                </div>
+                <div>
+                  <div className="small text-gray-500">December 2, 2019</div>
+                  Spending Alert: We've noticed unusually high spending for your
+                  account.
+                </div>
+              </a>
+              <a className="dropdown-item text-center small text-gray-500" href="#">
+                Show All Alerts
+              </a>
+            </div>
+          </li>
+
+          <li className="nav-item dropdown no-arrow mx-1">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="messagesDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i className="fas fa-envelope fa-fw"></i>
+
+              <span className="badge badge-danger badge-counter">7</span>
+            </a>
+            <div
+              className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+              aria-labelledby="messagesDropdown"
+            >
+              <h6 className="dropdown-header">Message Center</h6>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="dropdown-list-image mr-3">
+                  <img
+                    className="rounded-circle"
+                    src="img/undraw_profile_1.svg"
+                    alt="..."
+                  />
+                  <div className="status-indicator bg-success"></div>
+                </div>
+                <div className="font-weight-bold">
+                  <div className="text-truncate">
+                    Hi there! I am wondering if you can help me with a problem
+                    I've been having.
+                  </div>
+                  <div className="small text-gray-500">Emily Fowler · 58m</div>
+                </div>
+              </a>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="dropdown-list-image mr-3">
+                  <img
+                    className="rounded-circle"
+                    src="img/undraw_profile_2.svg"
+                    alt="..."
+                  />
+                  <div className="status-indicator"></div>
+                </div>
+                <div>
+                  <div className="text-truncate">
+                    I have the photos that you ordered last month, how would you
+                    like them sent to you?
+                  </div>
+                  <div className="small text-gray-500">Jae Chun · 1d</div>
+                </div>
+              </a>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="dropdown-list-image mr-3">
+                  <img
+                    className="rounded-circle"
+                    src="img/undraw_profile_3.svg"
+                    alt="..."
+                  />
+                  <div className="status-indicator bg-warning"></div>
+                </div>
+                <div>
+                  <div className="text-truncate">
+                    Last month's report looks great, I am very happy with the
+                    progress so far, keep up the good work!
+                  </div>
+                  <div className="small text-gray-500">Morgan Alvarez · 2d</div>
+                </div>
+              </a>
+              <a className="dropdown-item d-flex align-items-center" href="#">
+                <div className="dropdown-list-image mr-3">
+                  <img
+                    className="rounded-circle"
+                    src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                    alt="..."
+                  />
+                  <div className="status-indicator bg-success"></div>
+                </div>
+                <div>
+                  <div className="text-truncate">
+                    Am I a good boy? The reason I ask is because someone told me
+                    that people say this to all dogs, even if they aren't
+                    good...
+                  </div>
+                  <div className="small text-gray-500">Chicken the Dog · 2w</div>
+                </div>
+              </a>
+              <a className="dropdown-item text-center small text-gray-500" href="#">
+                Read More Messages
+              </a>
+            </div>
+          </li>
+
+          <div className="topbar-divider d-none d-sm-block"></div>
+
+          <li className="nav-item dropdown no-arrow">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span className="mr-2 d-none d-lg-inline text-gray-600 small">
+                Douglas McGee
+              </span>
+              <img
+                className="img-profile rounded-circle"
+                src="img/undraw_profile.svg"
+              />
+            </a>
+            <div
+              className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+              aria-labelledby="userDropdown"
+            >
+              <a className="dropdown-item" href="#">
+                <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Profile
+              </a>
+              <a className="dropdown-item" href="#">
+                <i className="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                Settings
+              </a>
+              <a className="dropdown-item" href="#">
+                <i className="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                Activity Log
+              </a>
+              <div className="dropdown-divider"></div>
+              <a
+                className="dropdown-item"
+                href="#"
+                data-toggle="modal"
+                data-target="#logoutModal"
+              >
+                <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+};
+
 export default Header;
