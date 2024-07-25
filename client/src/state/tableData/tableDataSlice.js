@@ -62,7 +62,9 @@ export const fetchTableData = (url) => async(dispatch) =>{
 // post request for add new data
 export const addTableDataRequest = (url, data) => async(dispatch) =>{
     try{
-        const response = await axios.post(url, data)
+        const response = await axios.post(url, data, {
+            headers : {'Content-Type': 'multipart/form-data'}
+        })
         dispatch(fetchTableData(url))
         return [true, response.data.message]
     }catch(error){
@@ -75,7 +77,9 @@ export const addTableDataRequest = (url, data) => async(dispatch) =>{
 // post request for update  data
 export const updateTableDataRequest = (url, data) => async(dispatch) =>{
     try{
-        const response = await axios.post(url, data)
+        const response = await axios.post(url, data, {
+            headers : {'Content-Type': 'multipart/form-data'}
+        })
         dispatch(fetchTableData(url))
         return [true, response.data.message]
     }catch(error){
@@ -85,7 +89,7 @@ export const updateTableDataRequest = (url, data) => async(dispatch) =>{
 }
 
 
-// post request for update  data
+// post request for delete  data
 export const deleteTableDataRequest = (url) => async(dispatch) =>{
     try{
         const response = await axios.delete(url)

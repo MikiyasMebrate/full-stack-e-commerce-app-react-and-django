@@ -44,7 +44,7 @@ const Category = () => {
   //fetch data for the first time
   useEffect(() => {
     dispatch(fetchTableData(urlCategory));
-  }, []);
+  }, [urlCategory]);
 
   //form update and add
   const {
@@ -92,6 +92,8 @@ const Category = () => {
 
   //response messages
   const [responseMessage, setResponseMessage] = useState([])
+
+  
 
   //handle on edit button Clicked
   const handleEdit = (item) => {
@@ -148,7 +150,7 @@ const Category = () => {
             <Table
               handleModalShow={handleAddModalShow}
               header={["Name", "Description", "Created at"]}
-              data={tableData.categories.map((item, index) => (
+              data={tableData?.categories?.map((item, index) => (
                 <tr key={item.id}>
                   <td>{index + 1}</td>
                   <td>{item.name}</td>
