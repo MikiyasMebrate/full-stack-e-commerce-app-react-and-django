@@ -5,7 +5,7 @@ import ClientLayout from "./layout/ClientLayout";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <>
-    {/* <AdminLayout /> */}
-    <ClientLayout />
+    <AdminLayout />
+    {/* <ClientLayout /> */}
     </>
 );

@@ -2,50 +2,60 @@
 import "../assets/Admin/vendor/fontawesome-free/css/all.min.css";
 import "../assets/Admin/css/sb-admin-2.min.css";
 
-
-
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //pages
-import Home from "../pages/Home"
-import HeadNav from "../pages/include/HeadNav"
+import Home from "../pages/Home";
+import HeadNav from "../pages/include/HeadNav";
 import Category from "../pages/Category";
 import Product from "../pages/Product";
 
 //redux
-import {store} from '../state/store'
-import {Provider} from "react-redux"
+import { store } from "../state/store";
+import { Provider } from "react-redux";
+import Login from "../pages/Login";
+import ProtectedRoute from "../utility/ProtectedRoute";
 
-
+import { AuthProvider } from "../context/AuthContext";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HeadNav />,
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    element: <ProtectedRoute />,
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <HeadNav />,
+        children: [
+          {
+            path: "/",
+            element: <Home />,
+          },
+          {
+            path: "category/",
+            element: <Category />,
+          },
+          {
+            path: "product/",
+            element: <Product />,
+          },
+        ],
       },
-      {
-        path: "category/",
-        element: <Category />,
-      },
-      {
-        path : "product/",
-        element : <Product />
-      }
     ],
   },
 ]);
 
 const AdminLayout = () => {
-  return(
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  )
+  return (
+    <AuthProvider>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </AuthProvider>
+  );
 };
 
 export default AdminLayout;
